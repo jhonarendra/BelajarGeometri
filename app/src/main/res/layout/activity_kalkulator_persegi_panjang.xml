@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee">
+        <LinearLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:padding="20dp">
+            <ImageView
+                android:id="@+id/imageMateriBangunDatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/white_persegipanjang" />
+
+            <TextView
+                android:id="@+id/namaMateriBangunDatar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:text="Kalkulator Persegi Panjang"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/forminput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <EditText
+                android:id="@+id/editPanjang"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan panjang"/>
+
+            <EditText
+                android:id="@+id/editLebar"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan lebar"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonGroup"
+            android:layout_below="@+id/forminput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp">
+            <Button
+                android:id="@+id/button_kll_persegi_panjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hitung Keliling"
+                android:onClick="HitungKllPersegiPanjang"/>
+            <Button
+                android:id="@+id/button_luas_persegi_panjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hitung Luas"
+                android:onClick="HitungLuasPersegiPanjang"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keliling"
+            android:layout_below="@+id/buttonGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Keliling"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/text_kll_persegi_panjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Jumlah"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/keliling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Luas"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/text_luas_persegi_panjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Jumlah"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="500dp"
+            android:paddingTop="20dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnMateri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Materi" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

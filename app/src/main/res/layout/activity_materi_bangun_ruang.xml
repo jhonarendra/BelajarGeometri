@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test_background">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee">
+        <LinearLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:padding="20dp">
+            <ImageView
+                android:id="@+id/imageMateriBangunRuang"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/white_kubus" />
+
+            <TextView
+                android:id="@+id/namaMateriBangunRuang"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:text="Nama"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_below="@+id/head">
+            <TextView
+                android:id="@+id/descBangunRuang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Deskripsi "/>
+            <ImageView
+                android:id="@+id/imageRumusBangunRuang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#cccccc"
+                android:padding="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rumus"
+                android:textSize="24dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Luas"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text=" : "/>
+                <TextView
+                    android:id="@+id/textLuasBangunRuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Rumus Luas"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Volume"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text=" : "/>
+                <TextView
+                    android:id="@+id/textVolumeBangunRuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Rumus Volume"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="500dp"
+            android:paddingTop="20dp"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnKalkulator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalkulator" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

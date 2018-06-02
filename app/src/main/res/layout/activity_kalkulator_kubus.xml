@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee">
+        <LinearLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:padding="20dp">
+            <ImageView
+                android:id="@+id/imageMateriBangunRuang"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/white_kubus" />
+
+            <TextView
+                android:id="@+id/namaMateriBangunRuang"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:text="Kalkulator Kubus"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/forminput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head"
+            android:padding="20dp">
+            <EditText
+                android:id="@+id/editsisikubus"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan panjang sisi"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonGroup"
+            android:layout_below="@+id/forminput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp">
+            <Button
+                android:id="@+id/button_luas_kubus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hitung Luas"
+                android:onClick="HitungLuasKubus"/>
+
+
+            <Button
+                android:id="@+id/button_volume_kubus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hitung Volume"
+                android:onClick="HitungVolumeKubus"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/luasKubus"
+            android:layout_below="@+id/buttonGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Luas"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/text_luas_kubus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Jumlah"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/luasKubus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Volume"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/text_volume_kubus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Jumlah"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="500dp"
+            android:paddingTop="20dp"
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnMateri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Materi" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

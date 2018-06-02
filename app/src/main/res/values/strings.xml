@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Belajar Geometri</string>
+    <string name="desc_main">Geometri merupakan cabang ilmu matematika yang mempelajari tentang hubungan antara titik-titik, garis-garis, bidang-bidang seperti bangun datar dan bangun ruang.</string>
+    <string name="desc_bangun_datar">Terdapat 9 jenis bangun datar pada aplikasi ini. Pilihlah bangun datar dibawah ini untuk membaca teori dan rumusnya serta kalkulator penghitung.</string>
+    <string name="desc_bangun_ruang">Pada aplikasi ini, terdapat 8 pilihan bangun ruang. Pilih diantara bangun ruang berikut untuk membaca teori dan rumusnya serta kalkulator penghitung</string>
+</resources>
