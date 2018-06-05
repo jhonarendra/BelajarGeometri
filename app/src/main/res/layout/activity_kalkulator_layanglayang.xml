@@ -25,7 +25,7 @@
                     android:id="@+id/imageMateriBangunDatar"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/white_persegi" />
+                    android:src="@drawable/white_layanglayang" />
 
                 <TextView
                     android:id="@+id/namaMateriBangunDatar"
@@ -34,7 +34,7 @@
                     android:gravity="center"
                     android:textColor="#ffffff"
                     android:textSize="30dp"
-                    android:text="Kalkulator Persegi"/>
+                    android:text="Kalkulator Layang Layang"/>
 
             </LinearLayout>
             <LinearLayout
@@ -47,13 +47,46 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sisi"/>
+                    android:text="Diagonal 1"/>
                 <EditText
-                    android:id="@+id/editsisipersegi"
+                    android:id="@+id/editD1LayangLayang"
                     android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Masukkan panjang sisi"/>
+                    android:hint="Masukkan panjang diagonal 1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Diagonal 2"/>
+                <EditText
+                    android:id="@+id/editD2LayangLayang"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan panjang diagonal 2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sisi pendek"/>
+                <EditText
+                    android:id="@+id/editSisiPendekLayangLayang"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan sisi pendek"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sisi panjang"/>
+                <EditText
+                    android:id="@+id/editSisiPanjangLayangLayang"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan sisi panjang"/>
             </LinearLayout>
 
             <LinearLayout
@@ -65,24 +98,21 @@
                 android:gravity="center"
                 android:paddingLeft="10dp">
                 <Button
-                    android:id="@+id/button_kll_persegi"
+                    android:id="@+id/button_kll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Keliling"
-                    android:onClick="HitungKllPersegi"/>
-
-
+                    android:onClick="HitungKllLayangLayang"/>
                 <Button
-                    android:id="@+id/button_luas_persegi"
+                    android:id="@+id/button_luas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Luas"
-                    android:onClick="HitungLuasPersegi"/>
-
+                    android:onClick="HitungLuasLayangLayang"/>
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/kelilingPersegi"
+                android:id="@+id/keliling"
                 android:layout_below="@+id/buttonGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +131,7 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_kll_persegi"
+                    android:id="@+id/text_kll_layanglayang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18dp" />
@@ -109,7 +139,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_below="@+id/kelilingPersegi"
+                android:layout_below="@+id/keliling"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -127,7 +157,7 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_luas_persegi"
+                    android:id="@+id/text_luas_layanglayang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18dp" />

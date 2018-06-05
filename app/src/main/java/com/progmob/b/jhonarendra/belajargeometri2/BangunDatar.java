@@ -1,9 +1,14 @@
 package com.progmob.b.jhonarendra.belajargeometri2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +40,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.persegi,
                 R.drawable.white_persegi,
                 "4 x s",
-                "s x s"
+                "s x s",
+                R.drawable.rumus_persegi
         ));
         bangunDatarList.add(new BangunDatarItem(
                 "Persegi Panjang",
@@ -43,7 +49,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.persegipanjang,
                 R.drawable.white_persegipanjang,
                 "2 x (p + l)",
-                "p x l"
+                "p x l",
+                R.drawable.rumus_persegipanjang
         ));
         bangunDatarList.add(new BangunDatarItem(
                 "Lingkaran",
@@ -51,7 +58,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.lingkaran,
                 R.drawable.white_lingkaran,
                 "2 x phi x r atau phi x d",
-                "phi x r x r"
+                "phi x r x r",
+                R.drawable.rumus_lingkaran
         ));
         bangunDatarList.add(new BangunDatarItem(
                 "Segitiga Sama Sisi",
@@ -59,7 +67,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.segitigasamasisi,
                 R.drawable.white_segitigasamasisi,
                 "s1 + s2 + s3",
-                "(a x t) / 2"
+                "(a x t) / 2",
+                R.drawable.rumus_segitigasamasisi
         ));
         bangunDatarList.add(new BangunDatarItem(
                 "Segitiga Sama Kaki",
@@ -67,7 +76,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.segitigasamakaki,
                 R.drawable.white_segitigasamakaki,
                 "s1 + s2 + s3",
-                "(a x t) / 2"
+                "(a x t) / 2",
+                R.drawable.rumus_segitigasamakaki
         ));
         bangunDatarList.add(new BangunDatarItem(
            "Segitiga Siku Siku",
@@ -75,7 +85,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.segitigasikusiku,
                 R.drawable.white_segitigasikusiku,
                 "s1 + s2 + s3",
-                "(a x t) / 2"
+                "(a x t) / 2",
+                R.drawable.rumus_segitigasikusiku
         ));
         bangunDatarList.add(new BangunDatarItem(
                 "Belah Ketupat",
@@ -83,7 +94,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.belahketupat,
                 R.drawable.white_belahketupat,
                 "s1 + s2 + s3 + s4",
-                "(d1 x d2) / 2"
+                "(d1 x d2) / 2",
+                R.drawable.rumus_belahketupat
         ));
         bangunDatarList.add(new BangunDatarItem(
                 "Layang Layang",
@@ -91,8 +103,8 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.layanglayang,
                 R.drawable.white_layanglayang,
                 "s1 + s2 + s3 + s4",
-                "(d1 x d2) / 2"
-
+                "(d1 x d2) / 2",
+                R.drawable.rumus_layanglayang
         ));
         bangunDatarList.add(new BangunDatarItem(
                 "Trapesium",
@@ -100,11 +112,21 @@ public class BangunDatar extends AppCompatActivity {
                 R.drawable.trapesium,
                 R.drawable.white_trapesium,
                 "s1 + s2 + s3 + s4",
-                "{(a + b) x t} / 2"
+                "{(a + b) x t} / 2",
+                R.drawable.rumus_trapesium
         ));
 
 
         adapter = new BangunDatarAdapter(this, bangunDatarList);
         recyclerView.setAdapter(adapter);
+
+        FloatingActionButton fab = findViewById(R.id.fabBack);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent2);
+            }
+        });
     }
 }

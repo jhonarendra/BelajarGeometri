@@ -1,9 +1,13 @@
 package com.progmob.b.jhonarendra.belajargeometri2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +38,8 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.kubus,
                 R.drawable.white_kubus,
                 "6 x s x s",
-                "s x s x s"
+                "s x s x s",
+                R.drawable.rumus_kubus
         ));
         bangunRuangItemList.add(new BangunRuangItem(
                 "Balok",
@@ -42,7 +47,8 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.balok,
                 R.drawable.white_balok,
                 "2 x (p x l) + 2 x (p x t) + 2 x (t x l)",
-                "p x l x t"
+                "p x l x t",
+                R.drawable.rumus_balok
         ));
         bangunRuangItemList.add(new BangunRuangItem(
                 "Kerucut",
@@ -50,7 +56,8 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.kerucut,
                 R.drawable.white_kerucut,
                 "phi x r x r + phi x r x s",
-                "(phi x r x r x t) / 3"
+                "(phi x r x r x t) / 3",
+                R.drawable.rumus_kerucut
         ));
         bangunRuangItemList.add(new BangunRuangItem(
                 "Limas Segiempat",
@@ -58,7 +65,8 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.limassegiempat,
                 R.drawable.white_limassegiempat,
                 "(4 x luas sisi) + luas alas",
-                "(luas alas x t) / 3"
+                "(luas alas x t) / 3",
+                R.drawable.rumus_limassegiempat
         ));
         bangunRuangItemList.add(new BangunRuangItem(
                 "Limas Segitiga",
@@ -66,7 +74,8 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.limassegitiga,
                 R.drawable.white_limassegitiga,
                 "luas alas + luas sisi1 + luas sisi2 + luas sisi 3 ",
-                "(luas alas x t) / 3"
+                "(luas alas x t) / 3",
+                R.drawable.rumus_limassegitiga
         ));
         bangunRuangItemList.add(new BangunRuangItem(
                 "Bola",
@@ -74,7 +83,8 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.bola,
                 R.drawable.white_bola,
                 "4 x phi x r x r",
-                "(4 x phi x r x r x r) / 3"
+                "(4 x phi x r x r x r) / 3",
+                R.drawable.rumus_bola
         ));
         bangunRuangItemList.add(new BangunRuangItem(
                 "Prisma Segitiga",
@@ -82,7 +92,8 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.prisma,
                 R.drawable.white_prisma,
                 "(S1 x S2 x S3) x T + a x t",
-                "(a x t x T) / 2"
+                "(a x t x T) / 2",
+                R.drawable.rumus_prisma
         ));
         bangunRuangItemList.add(new BangunRuangItem(
                 "Tabung",
@@ -90,11 +101,20 @@ public class BangunRuang extends AppCompatActivity {
                 R.drawable.tabung,
                 R.drawable.white_tabung,
                 "2 x phi x r x T + 2 x phi x r x r",
-                "phi x r x r x T"
+                "phi x r x r x T",
+                R.drawable.rumus_tabung
         ));
 
         bangunRuangAdapter = new BangunRuangAdapter(this, bangunRuangItemList);
         recyclerView.setAdapter(bangunRuangAdapter);
 
+        FloatingActionButton fab = findViewById(R.id.fabBack);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent2);
+            }
+        });
     }
 }

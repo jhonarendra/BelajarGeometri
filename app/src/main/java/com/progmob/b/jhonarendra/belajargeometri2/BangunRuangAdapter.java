@@ -51,6 +51,7 @@ public class BangunRuangAdapter extends RecyclerView.Adapter<BangunRuangAdapter.
                 intent.putExtra("descBangunRuang", bangunRuangList.get(position).getDescBangunRuang());
                 intent.putExtra("luasBangunRuang", bangunRuangList.get(position).getLuasBangunRuang());
                 intent.putExtra("volumeBangunRuang", bangunRuangList.get(position).getVolumeBangunRuang());
+                intent.putExtra("rumusBangunRuang", bangunRuangList.get(position).getRumusBangunRuang());
 
                 mCtx.startActivity(intent);
             }

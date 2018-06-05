@@ -15,12 +15,26 @@ public class KalkulatorBangunRuang extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        String namaBangunRuang = intent.getExtras().getString("namabangunruang");
+
+        final String namaBangunRuang = intent.getExtras().getString("namaBangunRuang");
+        final String descBangunRuang = intent.getExtras().getString("descBangunRuang");
+        final int whiteThumbBangunRuang = intent.getExtras().getInt("whiteThumbBangunRuang");
+        final String luasBangunRuang = intent.getExtras().getString("luasBangunRuang");
+        final String volumeBangunRuang = intent.getExtras().getString("volumeBangunRuang");
+        final int imageRumusBangunRuang = intent.getExtras().getInt("rumusBangunRuang");
 
         switch (namaBangunRuang){
             case "Kubus":
-                Intent i = new Intent(getApplicationContext(), KalkulatorKubus.class);
-                startActivity(i);
+                Intent i1 = new Intent(getApplicationContext(), KalkulatorKubus.class);
+
+                i1.putExtra("namaBangunRuang", namaBangunRuang);
+                i1.putExtra("descBangunRuang", descBangunRuang);
+                i1.putExtra("whiteThumbBangunRuang", whiteThumbBangunRuang);
+                i1.putExtra("luasBangunRuang", luasBangunRuang);
+                i1.putExtra("volumeBangunRuang", volumeBangunRuang);
+                i1.putExtra("imageRumusBangunRuang", imageRumusBangunRuang);
+
+                startActivity(i1);
                 break;
             default:
                 setContentView(R.layout.activity_main);

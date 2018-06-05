@@ -25,7 +25,7 @@
                     android:id="@+id/imageMateriBangunDatar"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/white_persegi" />
+                    android:src="@drawable/white_segitigasamasisi" />
 
                 <TextView
                     android:id="@+id/namaMateriBangunDatar"
@@ -33,8 +33,8 @@
                     android:layout_height="100dp"
                     android:gravity="center"
                     android:textColor="#ffffff"
-                    android:textSize="30dp"
-                    android:text="Kalkulator Persegi"/>
+                    android:textSize="25dp"
+                    android:text="Kalkulator Segitiga Sama Sisi"/>
 
             </LinearLayout>
             <LinearLayout
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sisi"/>
                 <EditText
-                    android:id="@+id/editsisipersegi"
+                    android:id="@+id/editSisiSegitigaSamaSisi"
                     android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -65,24 +65,23 @@
                 android:gravity="center"
                 android:paddingLeft="10dp">
                 <Button
-                    android:id="@+id/button_kll_persegi"
+                    android:id="@+id/button_kll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Keliling"
-                    android:onClick="HitungKllPersegi"/>
-
+                    android:onClick="HitungKllSegitigaSamaSisi"/>
 
                 <Button
-                    android:id="@+id/button_luas_persegi"
+                    android:id="@+id/button_luas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Luas"
-                    android:onClick="HitungLuasPersegi"/>
+                    android:onClick="HitungLuasSegitigaSamaSisi"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/kelilingPersegi"
+                android:id="@+id/keliling"
                 android:layout_below="@+id/buttonGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +100,7 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_kll_persegi"
+                    android:id="@+id/text_kll_segitigasamasisi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18dp" />
@@ -109,7 +108,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_below="@+id/kelilingPersegi"
+                android:layout_below="@+id/keliling"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -127,7 +126,7 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_luas_persegi"
+                    android:id="@+id/text_luas_segitigasamasisi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18dp" />

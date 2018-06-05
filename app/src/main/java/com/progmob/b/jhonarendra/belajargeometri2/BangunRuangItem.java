@@ -11,14 +11,16 @@ public class BangunRuangItem {
     public String VolumeBangunRuang;
     public int ThumbBangunRuang;
     public int WhiteThumbBangunRuang;
+    public int RumusBangunRuang;
 
-    public BangunRuangItem(String namaBangunRuang, String descBangunRuang, int thumbBangunRuang, int whiteThumbBangunRuang, String luasBangunRuang, String volumeBangunRuang){
+    public BangunRuangItem(String namaBangunRuang, String descBangunRuang, int thumbBangunRuang, int whiteThumbBangunRuang, String luasBangunRuang, String volumeBangunRuang, int rumusBangunRuang){
         this.NamaBangunRuang = namaBangunRuang;
         this.DescBangunRuang = descBangunRuang;
         this.LuasBangunRuang = luasBangunRuang;
         this.VolumeBangunRuang = volumeBangunRuang;
         this.ThumbBangunRuang = thumbBangunRuang;
         this.WhiteThumbBangunRuang = whiteThumbBangunRuang;
+        this.RumusBangunRuang = rumusBangunRuang;
     }
 
     public String getDescBangunRuang() {
@@ -43,5 +45,9 @@ public class BangunRuangItem {
 
     public String getVolumeBangunRuang() {
         return VolumeBangunRuang;
+    }
+
+    public int getRumusBangunRuang() {
+        return RumusBangunRuang;
     }
 }

@@ -25,7 +25,7 @@
                     android:id="@+id/imageMateriBangunDatar"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/white_persegi" />
+                    android:src="@drawable/white_belahketupat" />
 
                 <TextView
                     android:id="@+id/namaMateriBangunDatar"
@@ -33,8 +33,8 @@
                     android:layout_height="100dp"
                     android:gravity="center"
                     android:textColor="#ffffff"
-                    android:textSize="30dp"
-                    android:text="Kalkulator Persegi"/>
+                    android:textSize="25dp"
+                    android:text="Kalkulator Belah Ketupat"/>
 
             </LinearLayout>
             <LinearLayout
@@ -47,9 +47,31 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Diagonal 1"/>
+                <EditText
+                    android:id="@+id/editD1BelahKetupat"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan panjang diagonal 1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Diagonal 2"/>
+                <EditText
+                    android:id="@+id/editD2BelahKetupat"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan panjang diagonal 2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Sisi"/>
                 <EditText
-                    android:id="@+id/editsisipersegi"
+                    android:id="@+id/editSisiBelahKetupat"
                     android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -65,24 +87,23 @@
                 android:gravity="center"
                 android:paddingLeft="10dp">
                 <Button
-                    android:id="@+id/button_kll_persegi"
+                    android:id="@+id/button_kll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Keliling"
-                    android:onClick="HitungKllPersegi"/>
-
+                    android:onClick="HitungKllBelahKetupat"/>
 
                 <Button
-                    android:id="@+id/button_luas_persegi"
+                    android:id="@+id/button_luas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Luas"
-                    android:onClick="HitungLuasPersegi"/>
+                    android:onClick="HitungLuasBelahKetupat"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/kelilingPersegi"
+                android:id="@+id/keliling"
                 android:layout_below="@+id/buttonGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,15 +122,17 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_kll_persegi"
+                    android:id="@+id/text_kll_belahketupat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:text=""/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_below="@+id/kelilingPersegi"
+                android:id="@+id/luas"
+                android:layout_below="@+id/keliling"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -127,10 +150,11 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_luas_persegi"
+                    android:id="@+id/text_luas_belahketupat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:text=""/>
 
             </LinearLayout>
         </RelativeLayout>

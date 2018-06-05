@@ -13,24 +13,23 @@ import android.widget.TextView;
  * Created by Jhonarendra on 6/2/2018.
  */
 
-public class KalkulatorPersegi extends AppCompatActivity {
+public class KalkulatorLayangLayang extends AppCompatActivity {
 
-    EditText editSisiPersegi;
-    TextView textKllPersegi;
-    TextView textLuasPersegi;
-
-    Double sisi;
-    Double kllPersegi;
-    Double luasPersegi;
+    EditText editD1LayangLayang, editD2LayangLayang, editSisiPendekLayangLayang, editSisiPanjangLayangLayang;
+    TextView textKllLayangLayang, textLuasLayangLayang;
+    Double D1, D2, sisiPendek, sisiPanjang, kllLayangLayang, luasLayangLayang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kalkulator_persegi);
+        setContentView(R.layout.activity_kalkulator_layanglayang);
 
-        editSisiPersegi = (EditText) findViewById(R.id.editsisipersegi);
-        textKllPersegi = (TextView) findViewById(R.id.text_kll_persegi);
-        textLuasPersegi = (TextView) findViewById(R.id.text_luas_persegi);
+        editD1LayangLayang = (EditText) findViewById(R.id.editD1LayangLayang);
+        editD2LayangLayang = (EditText) findViewById(R.id.editD2LayangLayang);
+        editSisiPendekLayangLayang = (EditText) findViewById(R.id.editSisiPendekLayangLayang);
+        editSisiPanjangLayangLayang = (EditText) findViewById(R.id.editSisiPanjangLayangLayang);
+        textKllLayangLayang = (TextView) findViewById(R.id.text_kll_layanglayang);
+        textLuasLayangLayang = (TextView) findViewById(R.id.text_luas_layanglayang);
 
         Intent intent = getIntent();
         final String namaBangunDatar = intent.getExtras().getString("namaBangunDatar");
@@ -57,22 +56,20 @@ public class KalkulatorPersegi extends AppCompatActivity {
         });
 
     }
+    public void HitungKllLayangLayang(View view){
+        sisiPanjang = Double.parseDouble(editSisiPanjangLayangLayang.getText().toString());
+        sisiPendek = Double.parseDouble(editSisiPendekLayangLayang.getText().toString());
 
-    public void HitungKllPersegi(View view){
-        sisi = Double.parseDouble(editSisiPersegi.getText().toString());
-        kllPersegi = sisi * 4;
-
-        textKllPersegi.setText(String.valueOf(kllPersegi));
-
-    }
-    public void HitungLuasPersegi(View view){
-        sisi = Double.parseDouble(editSisiPersegi.getText().toString());
-        luasPersegi = sisi * sisi;
-
-        textLuasPersegi.setText(String.valueOf(luasPersegi));
+        kllLayangLayang = 2 * (sisiPendek + sisiPanjang);
+        textKllLayangLayang.setText(String.valueOf(kllLayangLayang));
 
     }
+    public void HitungLuasLayangLayang(View view){
+        D1 = Double.parseDouble(editD1LayangLayang.getText().toString());
+        D2 = Double.parseDouble(editD2LayangLayang.getText().toString());
 
-
+        luasLayangLayang = (D1 * D2) / 2;
+        textLuasLayangLayang.setText(String.valueOf(luasLayangLayang));
+    }
 }
 

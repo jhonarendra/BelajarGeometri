@@ -52,6 +52,7 @@ public class BangunDatarAdapter extends RecyclerView.Adapter<BangunDatarAdapter.
                 intent.putExtra("descBangunDatar", bangunDatarList.get(position).getDescBangunDatar());
                 intent.putExtra("kelilingBangunDatar", bangunDatarList.get(position).getKelilingBangunDatar());
                 intent.putExtra("luasBangunDatar", bangunDatarList.get(position).getLuasBangunDatar());
+                intent.putExtra("rumusBangunDatar", bangunDatarList.get(position).getRumusBangunDatar());
 
                 mCtx.startActivity(intent);
             }

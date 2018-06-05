@@ -25,7 +25,7 @@
                     android:id="@+id/imageMateriBangunDatar"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/white_persegi" />
+                    android:src="@drawable/white_lingkaran" />
 
                 <TextView
                     android:id="@+id/namaMateriBangunDatar"
@@ -34,7 +34,7 @@
                     android:gravity="center"
                     android:textColor="#ffffff"
                     android:textSize="30dp"
-                    android:text="Kalkulator Persegi"/>
+                    android:text="Kalkulator Lingkaran"/>
 
             </LinearLayout>
             <LinearLayout
@@ -47,13 +47,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sisi"/>
+                    android:text="Jari-jari"/>
                 <EditText
-                    android:id="@+id/editsisipersegi"
+                    android:id="@+id/editJariLingkaran"
                     android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Masukkan panjang sisi"/>
+                    android:hint="Masukkan panjang jari-jari"/>
             </LinearLayout>
 
             <LinearLayout
@@ -65,24 +65,24 @@
                 android:gravity="center"
                 android:paddingLeft="10dp">
                 <Button
-                    android:id="@+id/button_kll_persegi"
+                    android:id="@+id/button_kll_lingkaran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Keliling"
-                    android:onClick="HitungKllPersegi"/>
+                    android:onClick="HitungKllLingkaran"/>
 
 
                 <Button
-                    android:id="@+id/button_luas_persegi"
+                    android:id="@+id/button_luas_lingkaran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Luas"
-                    android:onClick="HitungLuasPersegi"/>
+                    android:onClick="HitungLuasLingkaran"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/kelilingPersegi"
+                android:id="@+id/keliling"
                 android:layout_below="@+id/buttonGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,15 +101,16 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_kll_persegi"
+                    android:id="@+id/text_kll_lingkaran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:text="Jumlah"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_below="@+id/kelilingPersegi"
+                android:layout_below="@+id/keliling"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -127,14 +128,18 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_luas_persegi"
+                    android:id="@+id/text_luas_lingkaran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:text="Jumlah"/>
 
             </LinearLayout>
+
+
         </RelativeLayout>
     </ScrollView>
+
     <android.support.design.widget.FloatingActionButton
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/fabBack"

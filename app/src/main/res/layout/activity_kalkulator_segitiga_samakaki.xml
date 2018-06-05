@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg2">
+    android:layout_height="match_parent">
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -25,7 +24,7 @@
                     android:id="@+id/imageMateriBangunDatar"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/white_persegi" />
+                    android:src="@drawable/white_segitigasamakaki" />
 
                 <TextView
                     android:id="@+id/namaMateriBangunDatar"
@@ -33,8 +32,8 @@
                     android:layout_height="100dp"
                     android:gravity="center"
                     android:textColor="#ffffff"
-                    android:textSize="30dp"
-                    android:text="Kalkulator Persegi"/>
+                    android:textSize="25dp"
+                    android:text="Kalkulator Segitiga Sama Kaki"/>
 
             </LinearLayout>
             <LinearLayout
@@ -47,9 +46,31 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Alas"/>
+                <EditText
+                    android:id="@+id/editAlasSegitigaSamaKaki"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan panjang alas"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Tinggi"/>
+                <EditText
+                    android:id="@+id/editTinggiSegitigaSamaKaki"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan tinggi"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Sisi"/>
                 <EditText
-                    android:id="@+id/editsisipersegi"
+                    android:id="@+id/editSisiSegitigaSamaKaki"
                     android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -65,24 +86,23 @@
                 android:gravity="center"
                 android:paddingLeft="10dp">
                 <Button
-                    android:id="@+id/button_kll_persegi"
+                    android:id="@+id/button_kll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Keliling"
-                    android:onClick="HitungKllPersegi"/>
-
+                    android:onClick="HitungKllSegitigaSamaKaki"/>
 
                 <Button
-                    android:id="@+id/button_luas_persegi"
+                    android:id="@+id/button_luas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hitung Luas"
-                    android:onClick="HitungLuasPersegi"/>
+                    android:onClick="HitungLuasSegitigaSamaKaki"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/kelilingPersegi"
+                android:id="@+id/keliling"
                 android:layout_below="@+id/buttonGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +121,7 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_kll_persegi"
+                    android:id="@+id/text_kll_segitigasamakaki"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18dp" />
@@ -109,7 +129,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_below="@+id/kelilingPersegi"
+                android:id="@+id/luas"
+                android:layout_below="@+id/keliling"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -127,7 +148,7 @@
                     android:textSize="18dp"
                     android:text=" : "/>
                 <TextView
-                    android:id="@+id/text_luas_persegi"
+                    android:id="@+id/text_luas_segitigasamakaki"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18dp" />
@@ -135,6 +156,7 @@
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
+
     <android.support.design.widget.FloatingActionButton
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/fabBack"

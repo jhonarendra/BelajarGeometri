@@ -1,36 +1,42 @@
 package com.progmob.b.jhonarendra.belajargeometri2;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.lang.Math;
 
 /**
  * Created by Jhonarendra on 6/2/2018.
  */
 
-public class KalkulatorPersegi extends AppCompatActivity {
+public class KalkulatorSegitigaSamaKaki extends AppCompatActivity {
+    EditText editAlasSegitigaSamaKaki;
+    EditText editTinggiSegitigaSamaKaki;
+    EditText editSisiSegitigaSamaKaki;
+    TextView textKllSegitigaSamaKaki;
+    TextView textLuasSegitigaSamaKaki;
 
-    EditText editSisiPersegi;
-    TextView textKllPersegi;
-    TextView textLuasPersegi;
-
+    Double alas;
     Double sisi;
-    Double kllPersegi;
-    Double luasPersegi;
+    Double tinggi;
+    Double kllSegitigaSamaKaki;
+    Double luasSegitigaSamaKaki;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kalkulator_persegi);
+        setContentView(R.layout.activity_kalkulator_segitiga_samakaki);
 
-        editSisiPersegi = (EditText) findViewById(R.id.editsisipersegi);
-        textKllPersegi = (TextView) findViewById(R.id.text_kll_persegi);
-        textLuasPersegi = (TextView) findViewById(R.id.text_luas_persegi);
+        editAlasSegitigaSamaKaki = (EditText) findViewById(R.id.editAlasSegitigaSamaKaki);
+        editTinggiSegitigaSamaKaki = (EditText) findViewById(R.id.editTinggiSegitigaSamaKaki);
+        editSisiSegitigaSamaKaki = (EditText) findViewById(R.id.editSisiSegitigaSamaKaki);
+        textKllSegitigaSamaKaki = (TextView) findViewById(R.id.text_kll_segitigasamakaki);
+        textLuasSegitigaSamaKaki = (TextView) findViewById(R.id.text_luas_segitigasamakaki);
 
         Intent intent = getIntent();
         final String namaBangunDatar = intent.getExtras().getString("namaBangunDatar");
@@ -57,22 +63,18 @@ public class KalkulatorPersegi extends AppCompatActivity {
         });
 
     }
+    public void HitungKllSegitigaSamaKaki(View view){
+        alas = Double.parseDouble(editAlasSegitigaSamaKaki.getText().toString());
+        sisi = Double.parseDouble(editSisiSegitigaSamaKaki.getText().toString());
+        kllSegitigaSamaKaki = 2 * sisi + alas;
+        textKllSegitigaSamaKaki.setText(String.valueOf(kllSegitigaSamaKaki));
+    }
+    public void HitungLuasSegitigaSamaKaki(View view){
+        alas = Double.parseDouble(editAlasSegitigaSamaKaki.getText().toString());
+        tinggi = Double.parseDouble(editTinggiSegitigaSamaKaki.getText().toString());
+        luasSegitigaSamaKaki = alas * tinggi / 2;
 
-    public void HitungKllPersegi(View view){
-        sisi = Double.parseDouble(editSisiPersegi.getText().toString());
-        kllPersegi = sisi * 4;
-
-        textKllPersegi.setText(String.valueOf(kllPersegi));
+        textLuasSegitigaSamaKaki.setText(String.valueOf(luasSegitigaSamaKaki));
 
     }
-    public void HitungLuasPersegi(View view){
-        sisi = Double.parseDouble(editSisiPersegi.getText().toString());
-        luasPersegi = sisi * sisi;
-
-        textLuasPersegi.setText(String.valueOf(luasPersegi));
-
-    }
-
-
 }
-

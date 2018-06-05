@@ -1,5 +1,6 @@
 package com.progmob.b.jhonarendra.belajargeometri2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,7 +38,8 @@ public class KalkulatorPersegiPanjang extends AppCompatActivity {
         btnMateri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(getApplicationContext(), BangunDatar.class);
+                startActivity(intent);
             }
         });
     }

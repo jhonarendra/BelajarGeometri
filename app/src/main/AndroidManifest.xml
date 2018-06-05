@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".Splash">
@@ -25,6 +25,12 @@
         <activity android:name=".KalkulatorBangunRuang" />
         <activity android:name=".KalkulatorPersegi" />
         <activity android:name=".KalkulatorPersegiPanjang" />
+        <activity android:name=".KalkulatorLingkaran" />
+        <activity android:name=".KalkulatorSegitigaSamaSisi" />
+        <activity android:name=".KalkulatorSegitigaSamaKaki" />
+        <activity android:name=".KalkulatorSegitigaSikuSiku" />
+        <activity android:name=".KalkulatorBelahKetupat" />
+        <activity android:name=".KalkulatorLayangLayang" />
         <activity android:name=".KalkulatorKubus" />
     </application>
 
