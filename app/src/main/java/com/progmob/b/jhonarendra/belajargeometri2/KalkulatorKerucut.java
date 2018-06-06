@@ -13,24 +13,23 @@ import android.widget.TextView;
  * Created by Jhonarendra on 6/2/2018.
  */
 
-public class KalkulatorKubus extends AppCompatActivity {
+public class KalkulatorKerucut extends AppCompatActivity {
 
-    EditText editSisiKubus;
-    TextView textVolumeKubus;
-    TextView textLuasKubus;
+    EditText editJariKerucut, editJSKerucut, editTinggiKerucut ;
+    TextView textLuasKerucut, textVolumeKerucut;
 
-    Double sisi;
-    Double volumeKubus;
-    Double luasKubus;
+    Double jari, jariSisi, tinggi, volume, luas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kalkulator_kubus);
+        setContentView(R.layout.activity_kalkulator_kerucut);
 
-        editSisiKubus = (EditText) findViewById(R.id.editsisikubus);
-        textVolumeKubus = (TextView) findViewById(R.id.text_volume_kubus);
-        textLuasKubus = (TextView) findViewById(R.id.text_luas_kubus);
+        editJariKerucut = (EditText) findViewById(R.id.editJariKerucut);
+        editJSKerucut = (EditText) findViewById(R.id.editJSKerucut);
+        editTinggiKerucut = (EditText) findViewById(R.id.editTinggiKerucut);
+        textVolumeKerucut = (TextView) findViewById(R.id.text_volume_kerucut);
+        textLuasKerucut = (TextView) findViewById(R.id.text_luas_kerucut);
 
         Intent intent = getIntent();
 
@@ -57,24 +56,19 @@ public class KalkulatorKubus extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
-    public void HitungVolumeKubus(View view){
-        sisi = Double.parseDouble(editSisiKubus.getText().toString());
-        volumeKubus = sisi * sisi * sisi;
-
-        textVolumeKubus.setText(String.valueOf(volumeKubus));
-
+    public void HitungVolumeKerucut(View view){
+        jari = Double.parseDouble(editJariKerucut.getText().toString());
+        tinggi = Double.parseDouble(editTinggiKerucut.getText().toString());
+        volume = (3.14*jari*jari*tinggi)/3;
+        textVolumeKerucut.setText(String.valueOf(volume));
     }
-    public void HitungLuasKubus(View view){
-        sisi = Double.parseDouble(editSisiKubus.getText().toString());
-        luasKubus = 6 * sisi * sisi;
-
-        textLuasKubus.setText(String.valueOf(luasKubus));
-
+    public void HitungLuasKerucut(View view){
+        jari = Double.parseDouble(editJariKerucut.getText().toString());
+        jariSisi = Double.parseDouble(editJSKerucut.getText().toString());
+        luas = (3.14*jari*jari)+(3.14*jari*jariSisi);
+        textLuasKerucut.setText(String.valueOf(luas));
     }
-
-
 }
 

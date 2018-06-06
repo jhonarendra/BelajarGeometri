@@ -13,24 +13,22 @@ import android.widget.TextView;
  * Created by Jhonarendra on 6/2/2018.
  */
 
-public class KalkulatorKubus extends AppCompatActivity {
+public class KalkulatorTabung extends AppCompatActivity {
 
-    EditText editSisiKubus;
-    TextView textVolumeKubus;
-    TextView textLuasKubus;
+    EditText editJariTabung, editTinggiTabung;
+    TextView textLuasTabung, textVolumeTabung;
 
-    Double sisi;
-    Double volumeKubus;
-    Double luasKubus;
+    Double jari,tinggi, volume, luas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kalkulator_kubus);
+        setContentView(R.layout.activity_kalkulator_tabung);
 
-        editSisiKubus = (EditText) findViewById(R.id.editsisikubus);
-        textVolumeKubus = (TextView) findViewById(R.id.text_volume_kubus);
-        textLuasKubus = (TextView) findViewById(R.id.text_luas_kubus);
+        editJariTabung = (EditText) findViewById(R.id.editJariTabung);
+        editTinggiTabung = (EditText) findViewById(R.id.editTinggiTabung);
+        textVolumeTabung = (TextView) findViewById(R.id.text_volume_tabung);
+        textLuasTabung = (TextView) findViewById(R.id.text_luas_tabung);
 
         Intent intent = getIntent();
 
@@ -57,24 +55,19 @@ public class KalkulatorKubus extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
-    public void HitungVolumeKubus(View view){
-        sisi = Double.parseDouble(editSisiKubus.getText().toString());
-        volumeKubus = sisi * sisi * sisi;
-
-        textVolumeKubus.setText(String.valueOf(volumeKubus));
-
+    public void HitungVolumeTabung(View view){
+        jari = Double.parseDouble(editJariTabung.getText().toString());
+        tinggi = Double.parseDouble(editTinggiTabung.getText().toString());
+        volume = 3.14*jari*jari*tinggi;
+        textVolumeTabung.setText(String.valueOf(volume));
     }
-    public void HitungLuasKubus(View view){
-        sisi = Double.parseDouble(editSisiKubus.getText().toString());
-        luasKubus = 6 * sisi * sisi;
-
-        textLuasKubus.setText(String.valueOf(luasKubus));
-
+    public void HitungLuasTabung(View view){
+        jari = Double.parseDouble(editJariTabung.getText().toString());
+        tinggi = Double.parseDouble(editTinggiTabung.getText().toString());
+        luas = 2*(3.14*jari*jari)+(2*3.14*jari)*tinggi;
+        textLuasTabung.setText(String.valueOf(luas));
     }
-
-
 }
 

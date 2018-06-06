@@ -13,24 +13,23 @@ import android.widget.TextView;
  * Created by Jhonarendra on 6/2/2018.
  */
 
-public class KalkulatorKubus extends AppCompatActivity {
+public class KalkulatorPrisma extends AppCompatActivity {
 
-    EditText editSisiKubus;
-    TextView textVolumeKubus;
-    TextView textLuasKubus;
+    EditText editPanjangPrisma, editLebarPrisma, editTinggiPrisma;
+    TextView textLuasPrisma, textVolumePrisma;
 
-    Double sisi;
-    Double volumeKubus;
-    Double luasKubus;
+    Double panjang,tinggi,lebar, volume, luas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kalkulator_kubus);
+        setContentView(R.layout.activity_kalkulator_prisma);
 
-        editSisiKubus = (EditText) findViewById(R.id.editsisikubus);
-        textVolumeKubus = (TextView) findViewById(R.id.text_volume_kubus);
-        textLuasKubus = (TextView) findViewById(R.id.text_luas_kubus);
+        editPanjangPrisma = (EditText) findViewById(R.id.editPanjangPrisma);
+        editLebarPrisma = (EditText) findViewById(R.id.editLebarPrisma);
+        editTinggiPrisma = (EditText) findViewById(R.id.editTinggiPrisma);
+        textVolumePrisma = (TextView) findViewById(R.id.text_volume_prisma);
+        textLuasPrisma = (TextView) findViewById(R.id.text_luas_prisma);
 
         Intent intent = getIntent();
 
@@ -57,24 +56,21 @@ public class KalkulatorKubus extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
-    public void HitungVolumeKubus(View view){
-        sisi = Double.parseDouble(editSisiKubus.getText().toString());
-        volumeKubus = sisi * sisi * sisi;
-
-        textVolumeKubus.setText(String.valueOf(volumeKubus));
-
+    public void HitungVolumePrisma(View view){
+        panjang = Double.parseDouble(editPanjangPrisma.getText().toString());
+        lebar = Double.parseDouble(editLebarPrisma.getText().toString());
+        tinggi = Double.parseDouble(editTinggiPrisma.getText().toString());
+        volume = (panjang*lebar*tinggi)/2;
+        textVolumePrisma.setText(String.valueOf(volume));
     }
-    public void HitungLuasKubus(View view){
-        sisi = Double.parseDouble(editSisiKubus.getText().toString());
-        luasKubus = 6 * sisi * sisi;
-
-        textLuasKubus.setText(String.valueOf(luasKubus));
-
+    public void HitungLuasPrisma(View view){
+        panjang = Double.parseDouble(editPanjangPrisma.getText().toString());
+        lebar = Double.parseDouble(editLebarPrisma.getText().toString());
+        tinggi = Double.parseDouble(editTinggiPrisma.getText().toString());
+        luas = (3*panjang*lebar)+(lebar*tinggi);
+        textLuasPrisma.setText(String.valueOf(luas));
     }
-
-
 }
 

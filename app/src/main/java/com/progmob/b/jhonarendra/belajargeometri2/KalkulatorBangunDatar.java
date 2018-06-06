@@ -119,10 +119,18 @@ public class KalkulatorBangunDatar extends AppCompatActivity {
 
                 startActivity(i8);
                 break;
-//            case "Trapesium":
-//                Intent i9 = new Intent(getApplicationContext(), KalkulatorTrapesium.class);
-//                startActivity(i9);
-//                break;
+            case "Trapesium":
+                Intent i9 = new Intent(getApplicationContext(), KalkulatorTrapesium.class);
+
+                i9.putExtra("namaBangunDatar", namaBangunDatar);
+                i9.putExtra("whiteThumbBangunDatar", whiteThumbBangunDatar);
+                i9.putExtra("descBangunDatar", descBangunDatar);
+                i9.putExtra("kelilingBangunDatar", kelilingBangunDatar);
+                i9.putExtra("luasBangunDatar", luasBangunDatar);
+                i9.putExtra("rumusBangunDatar", imageRumusBangunDatar);
+
+                startActivity(i9);
+                break;
             default:
                 finish();
         }

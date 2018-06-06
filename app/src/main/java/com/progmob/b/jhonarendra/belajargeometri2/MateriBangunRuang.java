@@ -26,7 +26,7 @@ public class MateriBangunRuang extends AppCompatActivity {
         final int whiteThumbBangunRuang = intent.getExtras().getInt("whiteThumbBangunRuang");
         final String luasBangunRuang = intent.getExtras().getString("luasBangunRuang");
         final String volumeBangunRuang = intent.getExtras().getString("volumeBangunRuang");
-        final int imageRumusBangunRuang = intent.getExtras().getInt("rumusBangunRuang");
+        final int rumusBangunRuang = intent.getExtras().getInt("rumusBangunRuang");
 
         TextView namaMateriBangunRuang = (TextView)findViewById(R.id.namaMateriBangunRuang);
         ImageView thumbMateriBangunRuang = (ImageView)findViewById(R.id.imageMateriBangunRuang);
@@ -40,7 +40,7 @@ public class MateriBangunRuang extends AppCompatActivity {
         descMateriBangunRuang.setText(descBangunRuang);
         materiVolumeBangunRuang.setText(volumeBangunRuang);
         materiLuasBangunRuang.setText(luasBangunRuang);
-        materiImageRumusBangunRuang.setImageResource(imageRumusBangunRuang);
+        materiImageRumusBangunRuang.setImageResource(rumusBangunRuang);
 
         FloatingActionButton fabback = findViewById(R.id.fabBack);
         fabback.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +61,7 @@ public class MateriBangunRuang extends AppCompatActivity {
                 intent.putExtra("whiteThumbBangunRuang", whiteThumbBangunRuang);
                 intent.putExtra("luasBangunRuang", luasBangunRuang);
                 intent.putExtra("volumeBangunRuang", volumeBangunRuang);
-                intent.putExtra("imageRumusBangunRuang", imageRumusBangunRuang);
+                intent.putExtra("rumusBangunRuang", rumusBangunRuang);
 
                 startActivity(intent);
             }

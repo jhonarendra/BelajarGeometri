@@ -31,7 +31,15 @@
         <activity android:name=".KalkulatorSegitigaSikuSiku" />
         <activity android:name=".KalkulatorBelahKetupat" />
         <activity android:name=".KalkulatorLayangLayang" />
+        <activity android:name=".KalkulatorTrapesium" />
         <activity android:name=".KalkulatorKubus" />
+        <activity android:name=".KalkulatorBalok" />
+        <activity android:name=".KalkulatorKerucut" />
+        <activity android:name=".KalkulatorLimasSegiempat" />
+        <activity android:name=".KalkulatorLimasSegitiga" />
+        <activity android:name=".KalkulatorBola" />
+        <activity android:name=".KalkulatorPrisma" />
+        <activity android:name=".KalkulatorTabung" />
     </application>
 
 </manifest>
