@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), BangunRuang.class);
         startActivity(intent);
     }
+    public void about(View view){
+        Intent intent = new Intent(getApplicationContext(), About.class);
+        startActivity(intent);
+    }
 }

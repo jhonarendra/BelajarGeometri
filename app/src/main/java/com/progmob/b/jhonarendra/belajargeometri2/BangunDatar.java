@@ -57,7 +57,7 @@ public class BangunDatar extends AppCompatActivity {
                 "Lingkaran adalah bangun datar yang hanya memiliki satu sisi yang melingkar dan bidang tengah dapat dihitung dengan jari-jari lingkaran atau diameter.",
                 R.drawable.lingkaran,
                 R.drawable.white_lingkaran,
-                "2 x phi x r atau phi x d",
+                "2 x phi x r",
                 "phi x r x r",
                 R.drawable.rumus_lingkaran
         ));
@@ -66,8 +66,8 @@ public class BangunDatar extends AppCompatActivity {
                 "Segitiga sama sisi adalah bangun datar yang memiliki 3 sisi yang sama panjang dan tiap titik sudut selalu membentuk 60 derajat.",
                 R.drawable.segitigasamasisi,
                 R.drawable.white_segitigasamasisi,
-                "s1 + s2 + s3",
-                "(a x t) / 2",
+                "3 x s",
+                "s x t / 2",
                 R.drawable.rumus_segitigasamasisi
         ));
         bangunDatarList.add(new BangunDatarItem(
@@ -75,7 +75,7 @@ public class BangunDatar extends AppCompatActivity {
                 "Segitiga sama kaki adalah bangun datar dengan 3 sisi yang 2 sisinya sama panjang dan 1 sisi berbeda yang menjadi alas segitiga.",
                 R.drawable.segitigasamakaki,
                 R.drawable.white_segitigasamakaki,
-                "s1 + s2 + s3",
+                "a + t + s",
                 "(a x t) / 2",
                 R.drawable.rumus_segitigasamakaki
         ));
@@ -93,7 +93,7 @@ public class BangunDatar extends AppCompatActivity {
                 "Belah ketupat merupakan bangun datar yang memiliki 4 sisi yang sama panjang, tetapi sudut pada tiap titik tidak 90 derajat.",
                 R.drawable.belahketupat,
                 R.drawable.white_belahketupat,
-                "s1 + s2 + s3 + s4",
+                "4 x s",
                 "(d1 x d2) / 2",
                 R.drawable.rumus_belahketupat
         ));
@@ -102,7 +102,7 @@ public class BangunDatar extends AppCompatActivity {
                 "Layang layang adalah bangun datar dengan 2 pasang sisi yang sama panjang yaitu 2 sisi pendek dan 2 sisi panjang.",
                 R.drawable.layanglayang,
                 R.drawable.white_layanglayang,
-                "s1 + s2 + s3 + s4",
+                "2 x (a + b)",
                 "(d1 x d2) / 2",
                 R.drawable.rumus_layanglayang
         ));
@@ -111,7 +111,7 @@ public class BangunDatar extends AppCompatActivity {
                 "Trapesium adalah bangun datar yang memiliki sepasang sisi sejajar dan sisi lainnya menghubungkan sisi sejajar.",
                 R.drawable.trapesium,
                 R.drawable.white_trapesium,
-                "s1 + s2 + s3 + s4",
+                "s1 + s2 + a + b",
                 "{(a + b) x t} / 2",
                 R.drawable.rumus_trapesium
         ));

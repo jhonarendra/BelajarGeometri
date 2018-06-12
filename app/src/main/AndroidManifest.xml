@@ -19,6 +19,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".BangunDatar" />
         <activity android:name=".BangunRuang" />
+        <activity android:name=".About" />
         <activity android:name=".MateriBangunDatar" />
         <activity android:name=".MateriBangunRuang" />
         <activity android:name=".KalkulatorBangunDatar" />

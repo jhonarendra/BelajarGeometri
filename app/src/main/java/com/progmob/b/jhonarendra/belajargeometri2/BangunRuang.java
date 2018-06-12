@@ -37,8 +37,8 @@ public class BangunRuang extends AppCompatActivity {
                 "Kubus adalah bangun ruang yang memiliki 12 rusuk sama panjang dan 6 bidang. Rusuk pada kubus di simbolkan \"s\" atau sisi.",
                 R.drawable.kubus,
                 R.drawable.white_kubus,
-                "6 x s x s",
-                "s x s x s",
+                "6 x R x R",
+                "R x R x R",
                 R.drawable.rumus_kubus
         ));
         bangunRuangItemList.add(new BangunRuangItem(
@@ -55,7 +55,7 @@ public class BangunRuang extends AppCompatActivity {
                 "Kerucut merupakan bangun ruang yang memiliki alas berbentuk lingkaran dan mengerucut keatas dengan tinggi tertentu.",
                 R.drawable.kerucut,
                 R.drawable.white_kerucut,
-                "phi x r x r + phi x r x s",
+                "(phi x r x r) + (phi x r x s)",
                 "(phi x r x r x t) / 3",
                 R.drawable.rumus_kerucut
         ));
@@ -64,8 +64,8 @@ public class BangunRuang extends AppCompatActivity {
                 "Limas segiempat merupakan bangun ruang seperti \"piramida\" yang memiliki alas berbentuk segiempat dengan bidang samping berupa segitiga.",
                 R.drawable.limassegiempat,
                 R.drawable.white_limassegiempat,
-                "(4 x luas sisi) + luas alas",
-                "(luas alas x t) / 3",
+                "(s x s) + 2 x (s x t)",
+                "(s x s x t) / 3",
                 R.drawable.rumus_limassegiempat
         ));
         bangunRuangItemList.add(new BangunRuangItem(
@@ -73,8 +73,8 @@ public class BangunRuang extends AppCompatActivity {
                 "Limas segitiga merupakan bangun ruang yang yang memiliki semua sisi berbentuk segitiga.",
                 R.drawable.limassegitiga,
                 R.drawable.white_limassegitiga,
-                "luas alas + luas sisi1 + luas sisi2 + luas sisi 3 ",
-                "(luas alas x t) / 3",
+                "(a x t)/2 + 3x(a x T)/2",
+                "T * (a x t)/2) / 3",
                 R.drawable.rumus_limassegitiga
         ));
         bangunRuangItemList.add(new BangunRuangItem(
@@ -91,8 +91,8 @@ public class BangunRuang extends AppCompatActivity {
                 "Prisma segitiga merupakan bangun ruang yang memiliki 5 bidang dengan 2 bidang segitiga dan 3 bidang segiempat.",
                 R.drawable.prisma,
                 R.drawable.white_prisma,
-                "(S1 x S2 x S3) x T + a x t",
-                "(a x t x T) / 2",
+                "(3 x p x l) + (l x t)",
+                "(p x l x t)/ 2",
                 R.drawable.rumus_prisma
         ));
         bangunRuangItemList.add(new BangunRuangItem(
